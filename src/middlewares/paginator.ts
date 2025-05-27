@@ -10,7 +10,7 @@ interface CustomResponse extends Response {
 
 export const pageable = (req: Request, res: Response, next: NextFunction) => {
   const pageParam: string = (req.query.page as string) || "1";
-  const perPageParam: string = (req.query.limit as string) || "5";
+  const perPageParam: string = (req.query.limit as string) || "10";
   let page = parseInt(pageParam);
   let limit = parseInt(perPageParam);
   if (isNaN(page) || page < 1) {

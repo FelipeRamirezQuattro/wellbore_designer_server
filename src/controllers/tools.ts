@@ -24,10 +24,10 @@ export const getTools = async (req: Request, res: Response) => {
 export const getToolsPaginated = async (
   req: Request,
   res: CustomResponse,
-  next: NextFunction
+  next: NextFunction,
 ): Promise<void> => {
   try {
-    const { page = 1, limit = 5 } = req.body.pagination;
+    const { page = 1, limit = 10 } = req.body.pagination;
     const search = req.query.search as string;
     const tools = await Tool.find({
       ...(search && {
