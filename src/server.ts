@@ -11,7 +11,7 @@ import { STATUS_CODES } from "./utils/constants";
 import toolRoutes from "./routes/tool.routes";
 import dotenv from "dotenv";
 dotenv.config();
-
+console.log(process.env.PORT);
 const app: Application = express();
 const PORT = process.env.PORT || 4000;
 const DB_HOST =
