@@ -42,6 +42,10 @@ const connectDB = async (): Promise<void> => {
 // API Endpoints
 app.use("/api/tools", toolRoutes);
 
+app.get("/api/test", (req: Request, res: Response) => {
+  res.status(200).json({ message: "Test endpoint working" });
+});
+
 // app.post(
 //   "/api/designs",
 //   async (
