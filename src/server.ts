@@ -18,7 +18,7 @@ const DB_HOST =
   process.env.DB_HOST || "mongodb://localhost:27017/wellbore-designer";
 
 var corsOptions = {
-  origin: "http://localhost:5173",
+  origin: ["http://localhost:5173", "https://well.osidesigner.com"],
   methods: "GET,PUT,PATCH,POST,DELETE",
   exposedHeaders: ["X-Total-Records", "X-Total-Pages", "X-Current-Page"],
   credentials: true,
