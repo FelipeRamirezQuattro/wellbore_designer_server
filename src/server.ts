@@ -9,6 +9,8 @@ import { ITool, IDesign, DesignDTO } from "./types";
 import * as response from "./utils/response";
 import { STATUS_CODES } from "./utils/constants";
 import toolRoutes from "./routes/tool.routes";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app: Application = express();
 const PORT = process.env.PORT || 4000;
